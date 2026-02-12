@@ -1,0 +1,82 @@
+/* 전체 페이지 */
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  font-family: 'Pretendard', sans-serif;
+  padding: 20px; /* 화면 양쪽 여백 확보 */
+  box-sizing: border-box;
+}
+
+/* 중앙 카드 */
+.home-card {
+  background: white;
+  padding: 60px 80px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  
+  /* 기존 제한 제거 */
+  max-width: none; /* 화면 최대폭 제한 해제 */
+  width: 100%;     /* 부모 컨테이너 가득 채움 */
+  max-width: 1200px; /* 원하면 최대 폭 제한 */
+}
+
+/* 제목 */
+.home-title {
+  font-size: 36px; /* 약간 키움 */
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+/* 부제목 */
+.home-subtitle {
+  color: #64748b;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* 버튼 컨테이너 */
+.home-buttons {
+  display: flex;
+  flex-direction: row; /* 가로로 배치 */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* 화면 작아지면 줄바꿈 */
+}
+
+/* 공통 버튼 스타일 */
+.home-btn {
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Test 버튼 */
+.test-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.test-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-3px);
+}
+
+/* Practice 버튼 */
+.practice-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.practice-btn:hover {
+  background-color: #059669;
+  transform: translateY(-3px);
+}
