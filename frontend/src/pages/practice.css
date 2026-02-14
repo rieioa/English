@@ -1,0 +1,191 @@
+/* 전역 설정 */
+.page {
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  color: #1a1f36;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  padding: 1.25rem 2.5rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #3b82f6;
+}
+
+.subtitle {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 메인 컨테이너 - 꽉 차게 수정 */
+.container {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  align-items: stretch; /* 좌우 높이를 동일하게 맞춰 꽉 찬 느낌 부여 */
+}
+
+/* 좌측 섹션 */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0; /* 내부 요소 넘침 방지 */
+}
+
+/* 우측 섹션 */
+.right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* 아바타 View 구역 */
+.avatar-view {
+  width: 100%;
+  /* 연결 전에도 16:9 박스 확보 */
+  background: white;         /* 카드처럼 보이게 */
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(212, 191, 191, 0.02);
+  overflow: hidden;
+}
+
+.avatar-view video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #8a8a8a;
+}
+
+.avatar-view audio {
+  display: none;
+}
+
+/* 카드 공통 스타일 - 너비 100% 강제 */
+.upload-card, .image-card, .record-section, .feedback-section {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.question-section{
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+/* 업로드 박스 */
+.upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  background: #f8fafc;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.upload-box:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* 이미지 카드 */
+.image-card img {
+  width: 100%;
+  max-height: 65vh; /* 화면 높이에 맞춰 최적화 */
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+}
+
+/* 텍스트 및 버튼 */
+.description, .feedback-content {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+button {
+  padding: 14px 28px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* 상태 메시지 */
+.status-msg {
+  /*flex: 1;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+  color: #64748b;
+  font-size: 1.1rem;
+
+  padding: 30px;     /* 카드 패딩 유지 */
+  min-height: 180px; /* 적당한 높이만 */
+}
+
+/* 반응형 모바일 처리 */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .left, .right {
+    width: 100%;
+    flex: none;
+  }
+}

@@ -28,7 +28,7 @@ function App() {
       {/* AI 이미지 분석 테스트 페이지 */}
       <Route path="/app/test" element={<Test />} />
 
-      {/* 말하기 연습 페이지 */}
+      {/* AI 파일 분석 테스트 페이지 */}
       <Route path="/app/practice" element={<Practice />} />
     </Routes>
   );
